@@ -90,7 +90,7 @@ public class SpotifyRepository {
             }
         }
         if(album == null){
-            throw new Exception();
+            throw new Exception("Album does not exist");
         }
 
         Song song = new Song(title,length);
@@ -113,7 +113,7 @@ public class SpotifyRepository {
             }
         }
         if(user == null){
-            throw new Exception();
+            throw new Exception("User does not exist");
         }
         Playlist playlist = new Playlist(title);
         playlists.add(playlist);
@@ -151,7 +151,7 @@ public class SpotifyRepository {
             }
         }
         if(user == null){
-            throw new Exception();
+            throw new Exception("User does not exist");
         }
         Playlist playlist = new Playlist(title);
         playlists.add(playlist);

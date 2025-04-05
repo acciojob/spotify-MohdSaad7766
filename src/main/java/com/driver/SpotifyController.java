@@ -41,7 +41,7 @@ public class SpotifyController {
         try{
             spotifyService.createSong(title,albumName,length);
         }catch (Exception e){
-            return "Album does not exist";
+            return e.getMessage();
         }
 
         return "Success";
@@ -55,7 +55,7 @@ public class SpotifyController {
         try{
             spotifyService.createPlaylistOnLength(mobile,title,length);
         } catch (Exception e) {
-            return "User does not exist";
+            return e.getMessage();
         }
 
 
@@ -70,7 +70,7 @@ public class SpotifyController {
         try{
             spotifyService.createPlaylistOnName(mobile,title,songTitles);
         } catch (Exception e) {
-            return "User does not exist";
+            return e.getMessage();
         }
 
         return "Success";
